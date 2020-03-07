@@ -1,0 +1,191 @@
+<meta charset="utf-8">
+<base href="/" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png">
+<title>Admin Dashboard | Swastik Landsman</title>
+<link rel="shortcut icon" href="/img/core-img/favicon.png" type="image/x-icon" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <script src="https://kit.fontawesome.com/78b77cd802.js" crossorigin="anonymous"></script> -->
+<style>
+	/* The side navigation menu */
+	.sidenav {
+	  height: 100%; /* 100% Full-height */
+	  width: 250px; /* 0 width - change this with JavaScript */
+	  position: fixed; /* Stay in place */
+	  z-index: 3; /* Stay on top */
+	  top: 0; /* Stay at the top */
+	  left: 0;
+	  box-shadow: 5px 0px 15px #444;
+	  background-color: #fff; /* Black*/
+	  overflow-y: scroll;
+	  overflow-x: hidden; /* Disable horizontal scroll */
+	  padding-top: 20px; /* Place content 60px from the top */
+	  padding-left: 8px;
+	  padding-right: 8px;
+	  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	} 
+
+	/* The navigation menu links */
+	.sidenav a {
+	  padding: 8px 8px 8px 32px;
+	  text-decoration: none;
+	  font-size: 15px;
+	  /*color: #818181;*/
+	  color:#343a40;
+	  border-radius: 5px;
+	  display: block;
+	  transition: 0.3s;
+	}
+
+	/* When you mouse over the navigation links, change their color */
+	.sidenav a:hover {
+	  /*color: #f1f1f1;*/
+	  background: lightgrey;
+	}
+
+	.sidenav a.active {
+	  color: #f1f1f1;
+	  background: #007bff;
+	}
+
+	/* Position and style the close button (top right corner) */
+	.sidenav .closebtn {
+	  display: none;
+	}
+
+	/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+	#main {
+	  transition: margin-left .5s;
+	  padding: 20px;
+	  margin-left: 250px;
+	}
+
+	.mobile_only{
+	  display: none;
+	}
+
+	.desktop_only{
+	  display: block;
+	}
+
+
+	.sidenav::-webkit-scrollbar {
+	    width: 2px;
+	}
+
+	.sidenav::-webkit-scrollbar-track {
+	    border-radius: 0px;
+	}
+
+	.sidenav::-webkit-scrollbar-thumb {
+	    border-radius: 0px;
+	    background-color: darkgrey;
+	}
+
+	/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+	@media only screen and (max-width: 450px) {
+	  .sidenav {
+	  	padding-top: 15px; width: 0px; padding-left: 0px; padding-right: 0px;
+	  }
+	  .sidenav a {font-size: 12px;}
+	  #main {margin-left: 0px;}
+	  .mobile_only{display: block}
+	  .sidenav .closebtn {
+	  	display: block;
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 36px;
+		  margin-left: 50px;
+		}
+		.desktop_only{
+		  display: none;
+		}
+	}
+
+	.box_form{
+		border-radius: 0px;
+		padding: 15px;
+		box-shadow: 0px 0px 15px #888888;
+		background: white;
+	}
+
+	.form_heading{
+		background-color: #007bff;color:white;margin-top: -15px;
+	}
+
+	thead{
+		background-color: #007bff;color:white;
+	}
+
+	.nav-tabs{
+		background-color: white;
+	}
+
+	.nav-tabs > li > a:hover {
+		background-color: darkgrey;
+	}
+
+	.nav-tabs > li > a{
+		background-color: #007bff;color:white;
+	}
+
+	.btn-primary{
+		border-radius: 0px;background-color: #007bff;min-width: 100px;
+	}
+	.btn-primary:hover{
+		background-color: #007bff;
+	}
+	.btn-primary::active{
+		background-color: #007bff !important;
+	}
+
+	/* The container */
+	.container {
+	  display: flex;
+	  position: relative;
+	  padding-left: 35px;
+	  margin-bottom: 12px;
+	  width: 100%;
+	  cursor: pointer;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	}
+
+	/* Hide the browser's default radio button */
+	.container input {
+	  position: absolute;
+	  opacity: 0;
+	  cursor: pointer;
+	}
+
+	/* Create a custom radio button */
+	.checkmark {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 30px;
+	  width: 100%;
+	  background-color: #eee;
+	  border-radius: 0%;
+	  text-align: center;
+	  line-height: 30px;
+	  vertical-align: middle;
+	}
+
+	/* On mouse-over, add a grey background color */
+	.container:hover input ~ .checkmark {
+	  background-color: #ccc;
+	}
+
+	/* When the radio button is checked, add a blue background */
+	.container input:checked ~ .checkmark {
+	  background-color: #2196F3;
+	}
+​
+</style>

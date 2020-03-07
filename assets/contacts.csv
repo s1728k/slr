@@ -1,0 +1,9 @@
+id,lead_cat,lead_type,date,name,phone_no,whats_app_no,address,pin,property_category,property_type,dimension,dim_unit,status,status_date,created_at,updated_at
+2,buyer,agent,2019-12-27,fsdfsdfdsf,432423,432423,sfdsfdsfs,42342,House,"1 BHK",234234,Sq/ft,,,"2019-12-27 12:30:00","2019-12-28 17:24:54"
+4,seller,direct,2019-12-27,krishna,890493373,890493373,"405, Sector 4, HSR Layout, Bengaluru, Karnataka 560102, India",560102,Flats,"1 BHK",1200,Sq/ft,,,"2019-12-27 15:52:43","2019-12-27 16:57:44"
+1,buyer,direct,2019-12-27,kumar,8094993723,8094993723,dfgdfgdfg,34344,House,"1 BHK",4500,Sq/ft,,,"2019-12-27 12:18:50","2019-12-28 17:24:50"
+5,seller,direct,2019-12-30,keshava,8904993723,8904993723,"405, Sector 4, HSR Layout, Bengaluru, Karnataka 560102, India",560102,"Form House","1 BHK",1500,Sq/ft,,,"2019-12-30 12:43:49","2019-12-30 14:17:57"
+3,buyer,direct,2019-12-27,fdsfsd,42432,42342,edfsf,434,House,"1 BHK",324,Acres,"Completed Client","2020-01-01 05:30:00","2019-12-27 12:50:45","2019-12-31 12:18:32"
+2,seller,agent,2019-12-27,keshava,89044876464,89044876464,"405, Sector 4, HSR Layout, Bengaluru, Karnataka 560102, India",560102,House,"1 BHK",8797,Sq/ft,"Client Meeting","2020-01-02 05:30:00","2019-12-27 12:20:06","2019-12-31 12:22:30"
+1,seller,direct,2019-12-27,Sunil,8904993723,8904993723,"405, Sector 4, HSR Layout, Bengaluru, Karnataka 560102, India",560102,House,"1 BHK",1200,Sq/ft,"Follow Up","2020-01-20 05:30:00","2019-12-27 12:16:46","2020-01-01 09:58:23"
+3,seller,direct,2019-12-27,sdff,9546543656,9546543656,"405, Sector 4, HSR Layout, Bengaluru, Karnataka 560102, India",560102,House,"1 BHK",324243,Acres,"Follow Up","2020-02-20 05:30:00","2019-12-27 12:49:33","2019-12-31 10:30:11"

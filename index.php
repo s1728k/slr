@@ -1,0 +1,235 @@
+<?php
+
+include('env.php');
+include('route.php');
+
+Route::add('/',function()use($app_key){
+    include($app_key.'/view/home.php');
+});
+Route::add('/scrape',function()use($app_key){
+    include($app_key.'/include/scrape.php');
+});
+Route::add('/boxt_scrape',function()use($app_key){
+    include($app_key.'/include/boxt_scrape.php');
+});
+Route::add('/boxt_scrape_csv',function()use($app_key){
+    include($app_key.'/include/boxt_scrape_csv.php');
+});
+Route::add('/terms_n_conditions',function()use($app_key){
+    include($app_key.'/view/terms_n_conditions.php');
+});
+Route::add('/create_form_id',function()use($app_key){
+    include($app_key.'/controller/create_form_id.php');
+},'post');
+Route::add('/create_member_id',function()use($app_key){
+    include($app_key.'/controller/create_member_id.php');
+},'post');
+Route::add('/member',function()use($app_key){
+    include($app_key.'/view/member.php');
+});
+Route::add('/seller/([a-z]*)',function($da)use($app_key){
+    include($app_key.'/view/seller.php');
+});
+Route::add('/buyer/([a-z]*)',function($da)use($app_key){
+    include($app_key.'/view/buyer.php');
+});
+Route::add('/edit_member/([0-9]*)',function($id)use($app_key){
+    include($app_key.'/controller/edit_member.php');
+});
+Route::add('/edit_seller/([0-9]*)',function($id)use($app_key){
+    include($app_key.'/controller/edit_seller.php');
+});
+Route::add('/edit_buyer/([0-9]*)',function($id)use($app_key){
+    include($app_key.'/controller/edit_buyer.php');
+});
+Route::add('/pick_lat_long',function()use($app_key){
+    include($app_key.'/controller/pick_lat_long.php');
+},'post');
+Route::add('/update_seller',function()use($app_key){
+    include($app_key.'/controller/update_seller.php');
+},'post');
+Route::add('/update_buyer',function()use($app_key){
+    include($app_key.'/controller/update_buyer.php');
+},'post');
+Route::add('/update_member',function()use($app_key){
+    include($app_key.'/controller/update_member.php');
+},'post');
+Route::add('/copy_to_member',function()use($app_key){
+    include($app_key.'/controller/copy_to_member.php');
+},'post');
+Route::add('/upload_seller_file',function()use($app_key){
+    include($app_key.'/controller/upload_seller_file.php');
+},'post');
+Route::add('/upload_seller_files',function()use($app_key){
+    include($app_key.'/controller/upload_seller_files.php');
+},'post');
+Route::add('/remove_seller_file',function()use($app_key){
+    include($app_key.'/controller/remove_seller_file.php');
+},'post');
+Route::add('/sp/([a-z,A-Z,0-9]*)',function($hash)use($app_key){
+    include($app_key.'/controller/show_property.php');
+});
+Route::add('/places_auto',function()use($app_key){
+    include($app_key.'/controller/places_auto.php');
+},'post');
+Route::add('/place_to_pin',function()use($app_key){
+    include($app_key.'/controller/place_to_pin.php');
+},'post');
+Route::add('/share_customer_link',function()use($app_key){
+    include($app_key.'/admin/controller/share_customer_link.php');
+},'post');
+
+//==============================Admin===========================================
+
+//-------------------auth-----------------------
+Route::add('/admin',function()use($app_key){
+    include($app_key.'/admin/view/login.php');
+},'get');
+Route::add('/admin/admin_login',function()use($app_key){
+    include($app_key.'/admin/controller/auth/admin_login.php');
+},'post');
+Route::add('/admin/change_password',function()use($app_key){
+    include($app_key.'/admin/view/admin/change_password.php');
+},'get','admin');
+Route::add('/admin/change_password',function()use($app_key){
+    include($app_key.'/admin/controller/auth/change_password.php');
+},'post','admin');
+Route::add('/admin/admin_logout',function()use($app_key){
+    include($app_key.'/admin/controller/auth/admin_logout.php');
+},'post','admin');
+
+
+//------------------admins-----------------------
+Route::add('/admin/create_admin_id',function()use($app_key){
+    include($app_key.'/admin/controller/admin/new_admin_id.php');
+},'post','admin','p11');
+Route::add('/admin/my_profile',function()use($app_key){
+    include($app_key.'/admin/controller/admin/my_profile.php');
+},'get','admin');
+Route::add('/admin/update_my_profile',function()use($app_key){
+    include($app_key.'/admin/controller/admin/update_my_profile.php');
+},'post','admin');
+Route::add('/admin/edit_admin/([0-9]*)',function($id)use($app_key){
+    include($app_key.'/admin/controller/admin/edit_admin.php');
+},'get','admin','p11');
+Route::add('/admin/update_admin',function()use($app_key){
+    include($app_key.'/admin/controller/admin/update_admin.php');
+},'post','admin','p11');
+Route::add('/admin/reset_password',function()use($app_key){
+    include($app_key.'/admin/controller/admin/reset_password.php');
+},'post','admin','p11');
+Route::add('/admin/delete_admin',function()use($app_key){
+    include($app_key.'/admin/controller/admin/delete_admin.php');
+},'post','admin','p11');
+Route::add('/admin/upload_admin_avatar',function()use($app_key){
+    include($app_key.'/admin/controller/admin/upload_admin_avatar.php');
+},'post','admin','p11');
+Route::add('/admin/upload_admin_profile_avatar',function()use($app_key){
+    include($app_key.'/admin/controller/admin/upload_admin_profile_avatar.php');
+},'post','admin');
+
+
+Route::add('/admin/home',function()use($app_key){
+    include($app_key.'/admin/view/home.php');
+},'get','admin','p1');
+Route::add('/admin/followups',function()use($app_key){
+    include($app_key.'/admin/controller/read_followup.php');
+},'get','admin','p2');
+Route::add('/admin/completed_clients',function()use($app_key){
+    include($app_key.'/admin/controller/read_completed_client.php');
+},'get','admin','p3');
+Route::add('/admin/customer_link_shares',function()use($app_key){
+    include($app_key.'/admin/controller/customer_link_share.php');
+},'get','admin','p6');
+Route::add('/admin/mail_box',function()use($app_key){
+    include($app_key.'/admin/view/mail_box.php');
+},'get','admin','p7');
+Route::add('/admin/report',function()use($app_key){
+    include($app_key.'/admin/controller/report.php');
+},'get','admin','p8');
+Route::add('/admin/favorites',function()use($app_key){
+    include($app_key.'/admin/controller/read_favorite.php');
+},'get','admin','p9');
+Route::add('/admin/client_meetings',function()use($app_key){
+    include($app_key.'/admin/controller/read_client_meeting.php');
+},'get','admin','p10');
+Route::add('/admin/admins',function()use($app_key){
+    include($app_key.'/admin/controller/admin/read_admin.php');
+},'get','admin','p11');
+Route::add('/admin/settings',function()use($app_key){
+    include($app_key.'/admin/view/settings.php');
+},'get','admin','p12');
+
+
+Route::add('/admin/level1',function()use($app_key){
+    include($app_key.'/admin/view/level1.php');
+},'get','admin','p1');
+Route::add('/admin/level2',function()use($app_key){
+    include($app_key.'/admin/view/level2.php');
+},'get','admin','p1');
+Route::add('/admin/filtered_leads',function()use($app_key){
+    include($app_key.'/admin/controller/filtered_lead.php');
+},'get','admin','p1');
+Route::add('/admin/lead_view/([a-z,A-Z,0-9]*)/([0-9]*)',function($table,$id)use($app_key){
+    include($app_key.'/admin/controller/lead_view.php');
+},'get','admin','p1');
+// Route::add('/admin/lead_edit_view/([a-z,A-Z,0-9]*)/([0-9]*)',function($table,$id)use($app_key){
+//     include($app_key.'/admin/controller/lead_edit_view.php');
+// },'get','admin');
+Route::add('/admin/update_lead',function()use($app_key){
+    include($app_key.'/admin/controller/update_lead.php');
+},'post','admin','p26');
+Route::add('/admin/move_to_client_meeting',function()use($app_key){
+    include($app_key.'/admin/controller/move_to_client_meeting.php');
+},'post','admin','p21');
+Route::add('/admin/move_to_completed_clients',function()use($app_key){
+    include($app_key.'/admin/controller/move_to_completed_clients.php');
+},'post','admin','p22');
+Route::add('/admin/move_to_none_status',function()use($app_key){
+    include($app_key.'/admin/controller/move_to_none_status.php');
+},'post','admin','p20');
+Route::add('/admin/add_to_favorites',function()use($app_key){
+    include($app_key.'/admin/controller/add_to_favorites.php');
+},'post','admin','p2');
+Route::add('/admin/remove_from_favorites',function()use($app_key){
+    include($app_key.'/admin/controller/remove_from_favorites.php');
+},'post','admin','p9');
+Route::add('/admin/delete_lead',function()use($app_key){
+    include($app_key.'/admin/controller/delete_lead.php');
+},'post','admin','p19');
+Route::add('/admin/delete_linkshare',function()use($app_key){
+    include($app_key.'/admin/controller/delete_linkshare.php');
+},'post','admin','p23');
+Route::add('/admin/export_to_csv',function()use($app_key){
+    include($app_key.'/admin/controller/export_to_csv.php');
+},'get','admin','p27');
+Route::add('/admin/sp/([a-z,A-Z,0-9]*)',function($hash)use($app_key){
+    include($app_key.'/admin/controller/show_property.php');
+},'get','admin','p6');
+Route::add('/admin/share_customer_link',function()use($app_key){
+    include($app_key.'/admin/controller/share_customer_link.php');
+},'post','admin','p1');
+Route::add('/admin/add_setting',function()use($app_key){
+    include($app_key.'/admin/controller/add_setting.php');
+},'post','admin','p12');
+Route::add('/admin/delete_setting',function()use($app_key){
+    include($app_key.'/admin/controller/delete_setting.php');
+},'post','admin','p12');
+Route::add('/admin/set_permission',function()use($app_key){
+    include($app_key.'/admin/controller/set_permission.php');
+},'post','admin','p12');
+
+//==============================End OF Routes===================================
+Route::pathNotFound(function($path)use($app_key){
+    include($app_key.'/include/404.php');
+});
+
+Route::methodNotAllowed(function($path, $method)use($app_key){
+    include($app_key.'/include/405.php');
+});
+
+Route::runMiddleware(function($route)use($app_key){
+    include($app_key.'/middleware/middlewares.php');
+});
+
+Route::run('/');
