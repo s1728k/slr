@@ -1,4 +1,4 @@
-<?php include($app_key.'/include/csrf_token.php'); ?>w
+<?php include($app_key.'/include/csrf_token.php'); ?>
 <?php
 if(isset($_SESSION['old'])){
 	$row = $_SESSION['old'];
