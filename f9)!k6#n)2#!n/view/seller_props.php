@@ -62,129 +62,129 @@
 				  </a>
 				</div><br>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Seller ID</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Seller ID</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['id']; ?></label>
 					</div>
 				</div>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Property For</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Property For</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['sr_type']; ?></label>
 					</div>
 				</div>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Name</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Name</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label>Swastik Landsman</label>
 						<!-- <label><?php echo $row['name']; ?></label> -->
 					</div>
 				</div>
 				<?php if($link['contact_info']): ?>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Phone No.</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Phone No.</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['phone_no']; ?></label>
 					</div>
 				</div>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>WhatsApp No.</u></label>
+					<div class="col-xs-6 text-right">
+						<label>WhatsApp No.</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['whats_app_no']; ?></label>
 					</div>
 				</div>
 				<?php endif; ?>
 				<?php if($link['location_info']): ?>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Google Maps Link</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Google Maps Link</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<a href="<?php echo $row['place_link']; ?>" target="_blank">Visit Google Maps</a>
 					</div>
 				</div>
 				<!-- <div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>GPRS Location</u></label>
+					<div class="col-xs-6 text-right">
+						<label>GPRS Location</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['address']; ?></label>
 					</div>
 				</div> -->
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Landmark</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Landmark</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['landmark']; ?></label>
 					</div>
 				</div>
 				<?php endif; ?>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Area/Villege</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Area/Villege</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['villege']; ?></label>
 					</div>
 				</div>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>PIN</u></label>
+					<div class="col-xs-6 text-right">
+						<label>PIN</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['pin']; ?></label>
 					</div>
 				</div>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Property Type</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Property Type</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['property_category']; ?> <?php echo $row['property_type']; ?></label>
 					</div>
 				</div>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Dimension</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Dimension</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['dimension']; ?> <?php echo $row['dim_unit']; ?></label>
 					</div>
 				</div>
 				<?php if($row['property_category'] == 'JD OR JV Lands'): ?>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Advance</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Advance</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['advance']; ?></label>
 					</div>
 				</div>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>GoodWill</u></label>
+					<div class="col-xs-6 text-right">
+						<label>GoodWill</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['goodwill']; ?></label>
 					</div>
 				</div>
 				<?php else: ?>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Price</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Price</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['price']; ?> <?php echo $row['p_unit']; ?> <?php echo $row['p_dim']; ?></label>
 					</div>
 				</div>
@@ -199,10 +199,10 @@
 				</div>
 				<?php if($link['status_info']): ?>
 				<div class="row form-group">
-					<div class="col-xs-12 text-center">
-						<label><u>Status</u></label>
+					<div class="col-xs-6 text-right">
+						<label>Status</label>
 					</div>
-					<div class="col-xs-12 text-center">
+					<div class="col-xs-6">
 						<label><?php echo $row['status']; ?></label>
 					</div>
 				</div>

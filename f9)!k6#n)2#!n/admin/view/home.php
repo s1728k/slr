@@ -17,6 +17,7 @@ $seller_agent_owner = Seller::where(null,null,null,'count',[
 	'social_media' => $_GET['social_media'],
 	'sr_type'=>'sell',
 	'lead_type'=>'agent',
+	['status','!=','Completed Client']
 ]);
 $buyer_direct_owner = Buyer::where(null,null,null,'count',[
 	'id' => $_GET['cid'],
