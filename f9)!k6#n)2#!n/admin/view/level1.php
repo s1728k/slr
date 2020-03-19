@@ -54,7 +54,6 @@ if(in_array($_GET['p1'], $member_types)){
 			'social_media' => $_GET['social_media'],
 			'member_type'=>$_GET['p1'],
 			'property_category'=>$p,
-			['status','!=','Completed Client']
 		]);
 	}
 }else{
@@ -66,7 +65,6 @@ if(in_array($_GET['p1'], $member_types)){
 				'sr_type'=>$sr,
 				'lead_type'=>$ad,
 				'property_category'=>$p,
-				['status','!=','Completed Client']
 			]);
 		}else{
 			$level1[$p] = Buyer::where(null,null,null,'count',[
@@ -75,7 +73,6 @@ if(in_array($_GET['p1'], $member_types)){
 				'br_type'=>$sr,
 				'lead_type'=>$ad,
 				'property_category'=>$p,
-				['status','!=','Completed Client']
 			]);
 		}
 	}

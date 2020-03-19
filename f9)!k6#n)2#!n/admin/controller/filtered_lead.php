@@ -33,7 +33,6 @@ $filter = [
 	'social_media' => $_GET['social_media'],
 	'lead_type'=>$ad,
 	'property_category'=>$_GET['p2'],
-	['status','!=','Completed Client']
 ];
 
 if(empty($_GET['p2'])){

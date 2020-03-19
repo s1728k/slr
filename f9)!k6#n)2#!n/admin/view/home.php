@@ -11,56 +11,48 @@ $seller_direct_owner = Seller::where(null,null,null,'count',[
 	'social_media' => $_GET['social_media'],
 	'sr_type'=>'sell',
 	'lead_type'=>'direct',
-	['status','!=','Completed Client']
 ]);
 $seller_agent_owner = Seller::where(null,null,null,'count',[
 	'id' => $_GET['cid'],
 	'social_media' => $_GET['social_media'],
 	'sr_type'=>'sell',
 	'lead_type'=>'agent',
-	['status','!=','Completed Client']
 ]);
 $buyer_direct_owner = Buyer::where(null,null,null,'count',[
 	'id' => $_GET['cid'],
 	'social_media' => $_GET['social_media'],
 	'br_type'=>'buy',
 	'lead_type'=>'direct',
-	['status','!=','Completed Client']
 ]);
 $buyer_agent_owner = Buyer::where(null,null,null,'count',[
 	'id' => $_GET['cid'],
 	'social_media' => $_GET['social_media'],
 	'br_type'=>'buy',
 	'lead_type'=>'agent',
-	['status','!=','Completed Client']
 ]);
 $seller_direct_rent = Seller::where(null,null,null,'count',[
 	'id' => $_GET['cid'],
 	'social_media' => $_GET['social_media'],
 	'sr_type'=>'rent',
 	'lead_type'=>'direct',
-	['status','!=','Completed Client']
 ]);
 $seller_agent_rent = Seller::where(null,null,null,'count',[
 	'id' => $_GET['cid'],
 	'social_media' => $_GET['social_media'],
 	'sr_type'=>'rent',
 	'lead_type'=>'agent',
-	['status','!=','Completed Client']
 ]);
 $buyer_direct_rent = Buyer::where(null,null,null,'count',[
 	'id' => $_GET['cid'],
 	'social_media' => $_GET['social_media'],
 	'br_type'=>'rent',
 	'lead_type'=>'direct',
-	['status','!=','Completed Client']
 ]);
 $buyer_agent_rent = Buyer::where(null,null,null,'count',[
 	'id' => $_GET['cid'],
 	'social_media' => $_GET['social_media'],
 	'br_type'=>'rent',
 	'lead_type'=>'agent',
-	['status','!=','Completed Client']
 ]);
 
 $setting = Setting::find(1);
@@ -70,7 +62,6 @@ foreach ($member_types as $type) {
 		'id' => $_GET['cid'],
 		'social_media' => $_GET['social_media'],
 		'member_type' => $type,
-		['status','!=','Completed Client']
 	]);
 }
 

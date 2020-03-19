@@ -52,7 +52,6 @@ foreach ($pr as $p) {
 			'lead_type'=>$ad,
 			'property_category'=>$_GET['p2'],
 			'property_type'=>$p,
-			['status','!=','Completed Client']
 		]);
 	}else{
 		$level2[$p] = Buyer::where(null,null,null,'count',[
@@ -62,7 +61,6 @@ foreach ($pr as $p) {
 			'lead_type'=>$ad,
 			'property_category'=>$_GET['p2'],
 			'property_type'=>$p,
-			['status','!=','Completed Client']
 		]);
 	}
 }
